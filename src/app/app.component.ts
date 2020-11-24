@@ -20,7 +20,7 @@ import { Component } from '@angular/core';
          <app-child  [user]="user" (userChanged)="outputHzndler($event)" > 
 
          <h3>*</h3>
-         <h5>---//-----</h5>
+         <h5>-----/-----</h5>
          </app-child >
         
         </p>
