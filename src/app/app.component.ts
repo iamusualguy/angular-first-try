@@ -19,11 +19,19 @@ import { Component } from '@angular/core';
       <p *ngFor="let user of users">
          <app-child  [user]="user" (userChanged)="outputHzndler($event)" > 
 
-         <h3>*</h3>
-         <h5>-----/-----</h5>
+         <h3 appColory >*</h3>
+         <h5 appColory>-----/-----</h5>
          </app-child >
         
         </p>
+        <hr>
+        <div appColory  #colory="colory"> ColoryDirective </div>
+
+        <div (click)="colory.setBgRandom()"> change color </div>
+
+        <hr>
+        <div *appDelay="1000"> DelayDirective  </div>
+        <div *appDelay="2000"> DelayDirective2  </div>
   `,
   styles: [`
   .red {
